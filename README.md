@@ -1,4 +1,13 @@
-# Curso Slim 4
+# Aplicacion Slim 4
+
+Es una aplicación básica creada para aprender el uso de slim 4 y twig como motor de plantillas, así como también
+para implementar una Api. 
+
+La aplicación tiene muy poco estilo, fue mas bien desarrollada para enfocarse en las funcionalidades de Slim y Twig.
+
+La Api, entrega los nombres de usuario que se encuentran en una base de datos mysql en un servidor local.
+
+Fuente: https://www.slimframework.com/docs/v4/start/installation.html
 
 ## Requisitos
 Para ejecutar el proyecto en local debes tener un servidor andando con apache y mysql. En mi caso uso Xampp.
