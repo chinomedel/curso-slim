@@ -1,22 +1,29 @@
 <?php
 use Psr\Http\Message\ResponseInterface as Response;
 use Psr\Http\Message\ServerRequestInterface as Request;
-use Slim\Factory\AppFactory;
+use Slim\Factory\AppFactory; 
+use Slim\Views\Twig; //Se llama al motor de plantillas Twig
+use Slim\Views\TwigMiddleware; // Se llama al Middleware para integrar twig con Slim
 use App\Controllers\HomeController;
+use App\Controllers\ContactoController as Contacto;
 
 require __DIR__.'/vendor/autoload.php';
 
 
 $app = AppFactory::create();
 
-//Configuración de la ruta base, sin esto la app no sabe donde iniciar
+
+$twig = Twig::create('templates',['cache'=>false]);
+$app->add(TwigMiddleware::create($app, $twig));
+
+//Configuración de la ruta base o raíz de la aplicación, sin esto la app no sabe donde iniciar
 $app->setBasePath("/curso-slim");
 
+//Función que llama a la clase HomeController y la funcion index cuando la url sea la raíz ("/")
 $app->get('/',HomeController::class.':index');
-$app->get('/contacto',function($request, $response, $args){
-    $response->getBody()->write('Estoy en el contacto');
-    return $response;
-});
+
+//Función que llama a la clase HomeController y la funcion index cuando la url sea la raíz/contacto ("/contacto")
+$app->get('/contacto', Contacto::class.':index');
 
 
 $app->run();
