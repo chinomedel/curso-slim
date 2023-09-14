@@ -1,4 +1,4 @@
-# Curso Slime
+# Curso Slim 4
 
 ## Requisitos
 Para ejecutar el proyecto en local debes tener un servidor andando con apache y mysql. En mi caso uso Xampp.
