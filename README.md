@@ -8,18 +8,23 @@ Tembién debes tener instalado composer
 ## Pasos para clonación por linea de comandos:
 
 1) Clona el proyecto a tu repositorio local en mi caso me posicione en la carpta htdocs de xampp
+```bash
 git clone https://github.com/chinomedel/curso-slim.git
 
 2) Una vez clonado debes eliminar el caché
+```bash
 composer clear-cache
 
-3) elimina la carpeta vendor
+3) Elimina la carpeta vendor
+```bash
 rm -rf vendor
 
 4) Elimina el archivo composer.lock
+```bash
 rm composer.lock
 
 5) Ejecuta el archivo composer.json
+```bash
 composer install
 
 ## Creación Base de Datos
