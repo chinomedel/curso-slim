@@ -3,8 +3,14 @@ namespace App\Models;
 use PDO;
 
 class MysqlModel{
+    private static $tabla = 'tbl';
 
-    public function ejecutarSql($sql){
+    protected static function select(){
+        $sql="select nombre from ".static::$tabla;
+
+        return self::ejecutarSql($sql);
+    }
+    protected static function ejecutarSql($sql){
         $conn = new PDO("mysql:host=localhost;dbname=slim_prueba","root", "admin");
     // Verifica si la conexión a la base de datos se estableció correctamente
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
