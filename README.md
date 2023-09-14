@@ -10,23 +10,24 @@ Tembién debes tener instalado composer
 1) Clona el proyecto a tu repositorio local en mi caso me posicione en la carpta htdocs de xampp
 ```bash
 git clone https://github.com/chinomedel/curso-slim.git
+```
 
 2) Una vez clonado debes eliminar el caché
 ```bash
 composer clear-cache
-
+```
 3) Elimina la carpeta vendor
 ```bash
 rm -rf vendor
-
+```
 4) Elimina el archivo composer.lock
 ```bash
 rm composer.lock
-
+```
 5) Ejecuta el archivo composer.json
 ```bash
 composer install
-
+```
 ## Creación Base de Datos
 Crea una base de datos con el nombre que quieras, en el directorio curso-slim/assets está el archivo para crear la tabla usuarios e
 insertar 2 usuarios.
