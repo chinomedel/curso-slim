@@ -4,17 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css"/>
 </head>
 <body>
     <header>
-        <h1></h1>
+        <h1>Página en Slim</h1>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/contacto">Contacto</a></li>
+                <li><a href="/curso-slim" {% if categoria == 'home' %} class="actual" {% endif%}>Home</a></li>
+                <li><a href="/curso-slim/contacto" {% if categoria == 'contacto' %} class="actual" {% endif%}>Contacto</a></li>
             </ul>
         </nav>
     </header>
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer>App Slim básica creado en curso Nelson Medel</footer>
     
 </body>
 </html>
