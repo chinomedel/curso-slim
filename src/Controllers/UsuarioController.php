@@ -14,7 +14,7 @@ class UsuarioController{
         $usuarios = new Usuarios();
         $nombres = $usuarios->all();
         
-        var_dump($nombres);
+        //var_dump($nombres);
        // En el array parámetros le envío datos al html en este caso al index.html
        // En el index.html le mandé el title y lo llamo en tre docles llaves {{}}
        $parametros = [
