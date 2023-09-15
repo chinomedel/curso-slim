@@ -1,2 +1,8 @@
 /* Estilo app slim Nelson Medel*/
 
+.titulo-paginas{
+    text-align: center;
+    color: #666;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}

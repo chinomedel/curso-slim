@@ -6,7 +6,7 @@ class MysqlModel{
     private static $tabla = 'tbl';
 
     protected static function select(){
-        $sql="select nombre from ".static::$tabla;
+        $sql="select nombre, apellido_uno, apellido_dos, email, telefono, fecha_creacion from ".static::$tabla;
 
         return self::ejecutarSql($sql);
     }

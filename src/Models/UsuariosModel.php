@@ -7,7 +7,7 @@ class UsuariosModel extends MysqlModel{
 
     public function all(){
         $mysqlmodel = self::select();
-        $nombres = array(); // Inicializamos un nuevo array para los nombres
+        /*$nombres = array(); // Inicializamos un nuevo array para los nombres
 
         foreach ($mysqlmodel as $fila) {
             // Verificamos si existe la clave "nombre" en cada fila y la agregamos al array de nombres
@@ -15,8 +15,8 @@ class UsuariosModel extends MysqlModel{
                 $nombres[] = $fila["nombre"];
             }
         }
-        //var_dump($nombres); 
-        return $nombres;
+        //var_dump($nombres); */
+        return $mysqlmodel;
     }
 
 }

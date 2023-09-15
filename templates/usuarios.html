@@ -2,10 +2,33 @@
 
 {% block main %}
     <!--El {{title}} es el parámetro que se envía del HomeController, específicamente la función index-->
-    <h1>Estás en: {{title}}</h1>
+    <h2 class="titulo-paginas">{{title}}</h2>
 
-    {% for user in nombres %}
-        <li>{{ user }}</li>
-    {% endfor %}
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Apellido Materno</th>
+            <th scope="col">Email</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Fecha Creación</th>
+          </tr>
+        </thead>
+        <tbody>
+            {% for user in nombres %}
+                <tr>
+                    <td>{{ user.nombre }}</td>
+                    <td>{{ user.apellido_uno }}</td>
+                    <td>{{ user.apellido_dos }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.telefono }}</td>
+                    <td>{{ user.fecha_creacion }}</td>
+                  </tr>
+            {% endfor %}
+          
+          
+        </tbody>
+      </table>
 
 {% endblock %}
