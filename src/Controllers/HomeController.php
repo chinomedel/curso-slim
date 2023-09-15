@@ -13,7 +13,7 @@ class HomeController{
        // En el array parámetros le envío datos al html en este caso al index.html
        // En el index.html le mandé el title y lo llamo en tre docles llaves {{}}
        $parametros = [
-        "title"=>"Página principal",
+        "title"=>"Home",
         "categoria"=>"home",
         "nombres" => ["Andrea","Nelson","Antonia"]
        ];
