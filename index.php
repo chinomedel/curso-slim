@@ -19,8 +19,9 @@ $twig = Twig::create('templates',['cache'=>false]);
 $app->add(TwigMiddleware::create($app, $twig));
 
 //Configuración de la ruta base o raíz de la aplicación, sin esto la app no sabe donde iniciar
-$app->setBasePath("/curso-slim");
-
+$app->setBasePath("/nbustamante/curso-slim");
+//Agrega Middleware de enrutamiento.
+$app->addRoutingMiddleware();
 //Función que llama a la clase HomeController y la funcion index cuando la url sea la raíz ("/")
 $app->get('/',HomeController::class.':index');
 
@@ -28,6 +29,7 @@ $app->get('/',HomeController::class.':index');
 $app->get('/contacto', Contacto::class.':index');
 $app->get('/usuarios', Usuario::class.':datosUsuarios');
 $app->get('/api/usuarios', UsuarioApi::class.':datosUsuarios');
+
 
 
 $app->run();

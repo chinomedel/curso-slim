@@ -3,6 +3,9 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+#Base de datos 
+src/Models/MysqlModel.php
+
 # User-specific files
 *.rsuser
 *.suo

@@ -11,7 +11,7 @@ class MysqlModel{
         return self::ejecutarSql($sql);
     }
     protected static function ejecutarSql($sql){
-        $conn = new PDO("mysql:host=localhost;dbname=slim_prueba","root", "admin");
+        $conn = new PDO("mysql:host=localhost;dbname=slim_prueba;charset=utf8","seguros", "sKas..88!!!!");
     // Verifica si la conexión a la base de datos se estableció correctamente
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
