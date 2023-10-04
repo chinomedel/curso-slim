@@ -19,7 +19,11 @@ $twig = Twig::create('templates',['cache'=>false]);
 $app->add(TwigMiddleware::create($app, $twig));
 
 //Configuración de la ruta base o raíz de la aplicación, sin esto la app no sabe donde iniciar
-$app->setBasePath("/nbustamante/curso-slim");
+$app->setBasePath("/nbustamante/seguros");
+
+//Intercepta los errores y los muestra ordenados.
+$app->addErrorMiddleware(true,true,false);
+
 //Agrega Middleware de enrutamiento.
 $app->addRoutingMiddleware();
 //Función que llama a la clase HomeController y la funcion index cuando la url sea la raíz ("/")
